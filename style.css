@@ -1,0 +1,16 @@
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+h1 {
+  color: #bd1f2d; /*samford red */
+}
+
+h2 {
+  color: #0c2340; /* samford blue */
+}
+
+h3 {
+  color: #64ccc9;
+}
