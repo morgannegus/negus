@@ -14,3 +14,22 @@ h2 {
 h3 {
   color: #64ccc9;
 }
+
+label {
+  font-weight: bold;
+  display:inline-block;
+  width:100px;
+  text-align:right;
+}
+
+input{
+  margin-bottom: 12px;
+}
+
+input[type=submit] {
+  float:right;
+}
+
+form {
+  width: 290px;
+}
