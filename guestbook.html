@@ -8,13 +8,14 @@
   <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 
-<body>
+<body onload="checkStorageGB()">
   <h1>Sign our guest list below</h1>
  <form action="#" onsubmit="return submitForm(this.name.value, this.hometown.value);">
   <label>Name:</label>
   <input id="name" /><br />
   <label>Hometown:</label>
   <input id="hometown" /><br />
+  <label></label>
   <input type="submit" /> 
  </form>
  <h2>Guest List</h2>
@@ -24,6 +25,7 @@
    <li>John Smith. Memphis, Tennessee</li>
    -->
  </ol>
+ <a href="#" onclick="if (confirm('are you sure?')){clearStorageGB(); } return false;">reset guestbook</a>
  <a href="index.html">Return to home page</a>
  <script src="script.js"></script>
 </body>
