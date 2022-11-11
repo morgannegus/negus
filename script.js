@@ -12,7 +12,7 @@ function submitForm(name, hometown) {
   saveRemote(name, hometown);
   guestlist.innerHTML += "<li>" + name + ". " + hometown + "</li>";
   n.value = "";
-  n.value = "";
+  h.value = "";
   n.focus();
   return false;
 }
@@ -24,6 +24,21 @@ function saveLocal(name, hometown) {
 
 function saveRemote(name, hometown) {
   $.get("save.php",{"name":name, "hometown":hometown});
+}
+
+function loadRemote() {
+  $.get("load.php",{},function(data) { 
+    data = JSON.parse(data);
+    console.log(data);
+    console.log("row by row:");
+    var html = "";
+    for (var i in data) {
+      console.log(data[i]);
+      if (data[i])
+      html += "<li>" + data[i] + "</li>";
+    }
+    $("#guestlist").html(html);
+  });
 }
 
 function clearStorageGB() {
